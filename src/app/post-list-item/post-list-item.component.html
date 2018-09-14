@@ -2,33 +2,28 @@
 'list-group-item-success': post.loveIts > 0,
 'list-group-item-danger': post.loveIts <= 0}">
     <div class="container">
-  <div class="row">
-      <div class="col-xs-8">
-          <h4 >{{ post.title }} </h4>
-      </div>
-      <div class="col-xs-4">
-          <span class="pull-right">
-              {{ post.created_at | date: 'dd MMMM yyyy hh:MM' }}
-            </span>
-      </div>
-      </div>
-      <div class="row">
-          <div class="col-xs-12">
-              <span >
-                  {{ post.content }}
+        <div class="row">
+            <div class="col-xs-8">
+                <h4>{{ post.title }} </h4>
+            </div>
+            <div class="col-xs-4">
+                <span class="pull-right">
+                    {{ post.created_at | date: 'dd MMMM yyyy hh:MM' }}
                 </span>
             </div>
         </div>
-
         <div class="row">
             <div class="col-xs-12">
-            <button type="button" class="btn btn-success" (click)="onAdd()">J'aime</button>
-            <button type="button" class="btn btn-danger" (click)="onRemove()">J'aime pas</button>
+                <span>
+                    {{ post.content }}
+                </span>
+            </div>
         </div>
-     
-
-      
-  </div>
-</div>
- 
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button" class="btn btn-success" (click)="onAdd()">J'aime</button>
+                <button type="button" class="btn btn-danger" (click)="onRemove()">J'aime pas</button>
+            </div>
+        </div>
+    </div>
 </li>

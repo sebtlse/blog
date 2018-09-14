@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../../objects/Post';
 
 @Component({
@@ -7,7 +7,7 @@ import { Post } from '../../objects/Post';
   styleUrls: ['./post-list-item.component.scss']
 })
 export class PostListItemComponent implements OnInit {
-  
+
   @Input() post: Post;
 
   constructor() { }
@@ -16,12 +16,12 @@ export class PostListItemComponent implements OnInit {
   }
 
   onAdd() {
-    this.post.loveIts +=1;
-}
+    this.post.loveIts += 1;
+  }
 
-onRemove() {
-  this.post.loveIts -=1;
-}
+  onRemove() {
+    this.post.loveIts -= 1;
+  }
 
 
 }
