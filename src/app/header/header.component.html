@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active">
+        <a routerLink="posts">Posts</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="new">Nouveau</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a (click)="onInitData()"
+           style="cursor:pointer"
+           >Réinitialiser les données</a>
+      </li>
+    </ul>
+  </div>
+</nav>

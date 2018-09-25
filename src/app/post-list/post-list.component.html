@@ -1,3 +1,13 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+</div>
+
+<div class="alert alert-info no-post" *ngIf="posts == null || posts.length == 0">
+  <span>Il n'y a aucun post pour l'instant !!</span>
+</div>
+
 <ul class="list-group">
-  <app-post-list-item *ngFor="let post of mesPosts" [post]="post"></app-post-list-item>
+  <app-post-list-item *ngFor="let post of posts" [post]="post"></app-post-list-item>
 </ul>
